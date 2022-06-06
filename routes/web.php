@@ -3,20 +3,11 @@
 use App\Http\Controllers\DemoController;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
- */
-
 Route::get('/', function () {
     return view('welcome');
 });
 
 Route::get('/MakeMigrationFile', [DemoController::class, 'MakeMigrationFile']);
 Route::get('/RunMigration', [DemoController::class, 'RunMigration']);
+Route::get('/AppCacheClear', [DemoController::class, 'AppCacheClear']);
+Route::get('/EnvConfig', [DemoController::class, 'EnvConfig']);
